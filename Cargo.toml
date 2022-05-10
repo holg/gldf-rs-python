@@ -10,4 +10,5 @@ crate-type = ["cdylib"]
 
 [dependencies]
 pyo3 = { version = "0.15.1", features = ["extension-module"] }
-gldf-rs = {path = "../gldf-rs"}
+#gldf-rs = {path = "../gldf-rs"}
+gldf-rs = {git = "https://github.com/holg/gldf-rs"}
