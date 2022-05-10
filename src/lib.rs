@@ -2,7 +2,7 @@
 use pyo3::prelude::*;
 use gldf_rs::gldf::GldfProduct;
 use std::path::Path;
-/// Formats the sum of two numbers as string.
+
 #[pyfunction]
 fn gldf_to_xml(path: &str) -> PyResult<String> {
     let loaded: GldfProduct = GldfProduct::load_gldf(path).unwrap();

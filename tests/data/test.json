@@ -1,0 +1,965 @@
+{
+    "path": "/Volumes/tb3ssd2tb/Users/htr/Documents/develeop/gldf/lidrs/src/gldf/examples/test.gldf",
+    "header": {
+        "author": "_empty_",
+        "manufacturer": "demo",
+        "creation_time_code": "2022-03-14T12:16:00",
+        "created_with_application": "GLDF Edit",
+        "format_version": "1.0.0-rc.1",
+        "default_language": "en-US",
+        "license_keys": {
+            "license_key": [
+                {
+                    "application": "RELUX",
+                    "license_key": "_empty_"
+                },
+                {
+                    "application": "DIALux",
+                    "license_key": "_empty_"
+                }
+            ]
+        },
+        "relux_member_id": "dmo",
+        "dia_lux_member_id": "_empty_",
+        "contact": {
+            "address": [
+                {
+                    "first_name": "_empty_1",
+                    "name": "_empty_2",
+                    "street": "Kaspar Pfeiffer Str. 43",
+                    "zip_code": "41425",
+                    "city": "Münchenstein4",
+                    "country": "Switzerland6",
+                    "phone": "+41 (0) 61 333 07 707",
+                    "e_mail_addresses": {
+                        "e_mail": [
+                            {
+                                "mailto": "info@relux.com8",
+                                "value": "Relux Info9"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    },
+    "general_definitions": {
+        "files": {
+            "file": [
+                {
+                    "id": "ldtfile",
+                    "content_type": "ldc/eulumdat",
+                    "type_attr": "localFileName",
+                    "language": null,
+                    "file_name": "diffuse.ldt"
+                },
+                {
+                    "id": "pic01",
+                    "content_type": "image/jpg",
+                    "type_attr": "localFileName",
+                    "language": null,
+                    "file_name": "bulb.jpg"
+                },
+                {
+                    "id": "geo01",
+                    "content_type": "geo/l3d",
+                    "type_attr": "localFileName",
+                    "language": null,
+                    "file_name": "recessed_round.l3d"
+                }
+            ]
+        },
+        "sensors": null,
+        "photometries": {
+            "photometry": [
+                {
+                    "id": "",
+                    "photometry_file_reference": {
+                        "file_id": ""
+                    },
+                    "descriptive_photometry": {
+                        "luminaire_luminance": null,
+                        "light_output_ratio": null,
+                        "luminous_efficacy": 98.2,
+                        "downward_flux_fraction": null,
+                        "downward_light_output_ratio": null,
+                        "upward_light_output_ratio": null,
+                        "tenth_peak_divergence": null,
+                        "half_peak_divergence": null,
+                        "photometric_code": null,
+                        "cie_flux_code": "44 75 94 100 100",
+                        "cut_off_angle": null,
+                        "ugr4_h8_h705020_lq": null,
+                        "iesna_light_distribution_definition": null,
+                        "light_distribution_bug_rating": null
+                    }
+                }
+            ]
+        },
+        "spectrums": null,
+        "light_sources": {
+            "changeable_light_source": [],
+            "fixed_light_source": [
+                {
+                    "id": "",
+                    "name": {
+                        "language": "",
+                        "value": ""
+                    },
+                    "description": {
+                        "language": "",
+                        "value": ""
+                    },
+                    "manufacturer": "",
+                    "gtin": "",
+                    "rated_input_power": 10.2,
+                    "rated_input_voltage": {
+                        "voltage_range": {
+                            "min": 0.0,
+                            "max": 0.0
+                        },
+                        "fixed_voltage": 0.0,
+                        "type_attr": "",
+                        "frequency": ""
+                    },
+                    "power_range": {
+                        "lower": 0.0,
+                        "upper": 0.0,
+                        "default_light_source_power": 0.0
+                    },
+                    "light_source_position_of_usage": "",
+                    "energy_labels": {
+                        "energy_label": []
+                    },
+                    "spectrum_reference": {
+                        "spectrum_id": ""
+                    },
+                    "active_power_table": {
+                        "type_attr": "",
+                        "default_light_source_power": ""
+                    },
+                    "color_information": {
+                        "color_rendering_index": 95,
+                        "correlated_color_temperature": 3000,
+                        "color_temperature_adjusting_range": {
+                            "lower": 0,
+                            "upper": 0
+                        },
+                        "cie1931_color_appearance": {
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.0
+                        },
+                        "initial_color_tolerance": "",
+                        "maintained_color_tolerance": "",
+                        "rated_chromacity_coordinate_values": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "tlci": 0,
+                        "iestm3015": {
+                            "rf": 0,
+                            "rg": 0
+                        },
+                        "melanopic_factor": 0.0
+                    },
+                    "light_source_images": {
+                        "image": []
+                    },
+                    "light_source_maintenance": {
+                        "lifetime": null,
+                        "cie97_lamp_type": null,
+                        "cie_lamp_maintenance_factors": null,
+                        "lamp_survival_factor": null
+                    },
+                    "zhaga_standard": null
+                }
+            ]
+        },
+        "control_gears": {
+            "control_gear": [
+                {
+                    "id": "",
+                    "name": {
+                        "language": "",
+                        "value": ""
+                    },
+                    "description": {
+                        "language": "",
+                        "value": ""
+                    },
+                    "nominal_voltage": {
+                        "voltage_range": {
+                            "min": 0.0,
+                            "max": 0.0
+                        },
+                        "fixed_voltage": 0.0,
+                        "type_attr": "",
+                        "frequency": ""
+                    },
+                    "standby_power": 0.011,
+                    "constant_light_output_start_power": 0.012,
+                    "constant_light_output_end_power": 0.013,
+                    "power_consumption_controls": 0.014,
+                    "dimmable": false,
+                    "color_controllable": false,
+                    "interfaces": {
+                        "interface": [
+                            "DALI Broadcast",
+                            "DALI Addressable"
+                        ]
+                    },
+                    "energy_labels": {
+                        "energy_label": []
+                    }
+                }
+            ]
+        },
+        "equipments": null,
+        "emitters": {
+            "emitter": {
+                "id": "",
+                "changeable_light_emitter": [],
+                "fixed_light_emitter": [
+                    {
+                        "emergency_behaviour": null,
+                        "name": {
+                            "language": "",
+                            "value": ""
+                        },
+                        "rotation": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0,
+                            "g0": 0
+                        },
+                        "photometry_reference": {
+                            "photometry_id": ""
+                        },
+                        "light_source_reference": {
+                            "changeable_light_source_id": "",
+                            "light_source_count": null
+                        },
+                        "control_gear_reference": {
+                            "control_gear_id": "",
+                            "control_gear_count": 0
+                        },
+                        "rated_luminous_flux": 1004,
+                        "rated_luminous_flux_rgb": 0,
+                        "emergency_ballast_lumen_factor": 0.0,
+                        "emergency_rated_luminous_flux": ""
+                    }
+                ],
+                "sensor": []
+            }
+        },
+        "geometries": {
+            "simple_geometry": [],
+            "model_geometry": [
+                {
+                    "id": "",
+                    "geometry_file_reference": [
+                        {
+                            "file_id": "",
+                            "level_of_detail": null
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "product_definitions": {
+        "product_meta_data": {
+            "product_number": {
+                "language": "",
+                "value": ""
+            },
+            "name": {
+                "language": "",
+                "value": ""
+            },
+            "description": {
+                "language": "",
+                "value": ""
+            },
+            "tender_text": {
+                "language": "",
+                "value": ""
+            },
+            "product_series": {
+                "product_serie": [
+                    {
+                        "name": {
+                            "language": "",
+                            "value": ""
+                        },
+                        "description": {
+                            "language": "",
+                            "value": ""
+                        },
+                        "pictures": {
+                            "image": []
+                        },
+                        "hyperlinks": {
+                            "hyperlink": [
+                                {
+                                    "href": "",
+                                    "language": null,
+                                    "region": null,
+                                    "country_code": null,
+                                    "value": ""
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "pictures": {
+                "image": [
+                    {
+                        "file_id": "",
+                        "image_type": ""
+                    }
+                ]
+            },
+            "luminaire_maintenance": {
+                "cie97_luminaire_type": "Open Top Housing (Natural Ventilated)",
+                "cie_luminaire_maintenance_factors": {
+                    "luminaire_maintenance_factor": [
+                        {
+                            "years": "",
+                            "room_condition": "",
+                            "value": 0.0
+                        }
+                    ]
+                },
+                "ies_luminaire_light_loss_factors": {
+                    "luminaire_dirt_depreciation": []
+                },
+                "jieg_maintenance_factors": {
+                    "luminaire_maintenance_factor": []
+                }
+            },
+            "descriptive_attributes": {
+                "mechanical": {
+                    "product_size": {
+                        "length": 140,
+                        "width": 0,
+                        "height": 100
+                    },
+                    "product_form": "",
+                    "sealing_material": {
+                        "language": "",
+                        "value": ""
+                    },
+                    "adjustabilities": {
+                        "adjustability": []
+                    },
+                    "ik_rating": "IK06",
+                    "protective_areas": {
+                        "area": []
+                    },
+                    "weight": 0.56
+                },
+                "electrical": {
+                    "clamping_range": {
+                        "lower": 0.01,
+                        "upper": 99.9
+                    },
+                    "switching_capacity": "_empty_sw",
+                    "electrical_safety_class": "III",
+                    "ingress_protection_ip_code": "IP51",
+                    "power_factor": 0.012,
+                    "constant_light_output": true,
+                    "light_distribution": ""
+                },
+                "emergency": null,
+                "marketing": {
+                    "list_prices": {
+                        "list_price": []
+                    },
+                    "housing_colors": {
+                        "housing_color": []
+                    },
+                    "markets": {
+                        "region": []
+                    },
+                    "hyperlinks": {
+                        "hyperlink": []
+                    },
+                    "designer": "Relux Web Team",
+                    "approval_marks": {
+                        "approval_mark": []
+                    },
+                    "design_awards": {
+                        "design_award": [
+                            "Perfect light award"
+                        ]
+                    },
+                    "labels": {
+                        "label": []
+                    },
+                    "applications": {
+                        "application": [
+                            "Interior: Shop Lighting: Retail",
+                            "Interior: Office: Office Desks",
+                            "Interior: Office: Discussions"
+                        ]
+                    }
+                },
+                "operations_and_maintenance": {
+                    "useful_life_times": {
+                        "useful_life": [
+                            "L80B50 50000h 25\u00b0C"
+                        ]
+                    },
+                    "median_useful_life_times": {
+                        "median_useful_life": []
+                    },
+                    "operating_temperature": {
+                        "lower": 0,
+                        "upper": 0
+                    },
+                    "ambient_temperature": {
+                        "lower": 0,
+                        "upper": 0
+                    },
+                    "rated_ambient_temperature": 0,
+                    "atex": {
+                        "directives": {
+                            "directive": []
+                        },
+                        "classes": {
+                            "class": []
+                        },
+                        "divisions": {
+                            "division": []
+                        },
+                        "division_groups": {
+                            "gas": {
+                                "group": []
+                            },
+                            "dust": {
+                                "group": []
+                            }
+                        },
+                        "zones": {
+                            "gas": {
+                                "group": []
+                            },
+                            "dust": {
+                                "group": []
+                            }
+                        },
+                        "zone_groups": {
+                            "gas": {
+                                "group": []
+                            },
+                            "dust": {
+                                "group": []
+                            }
+                        },
+                        "maximum_surface_temperature": "",
+                        "temperature_classes": {
+                            "temperature_class": []
+                        },
+                        "ex_codes": {
+                            "ex_code": []
+                        },
+                        "equipment_protection_levels": {
+                            "equipment_protection_level": []
+                        },
+                        "equipment_groups": {
+                            "equipment_group": []
+                        },
+                        "equipment_categories": {
+                            "equipment_category": []
+                        },
+                        "atmospheres": {
+                            "atmosphere": []
+                        },
+                        "groups": {
+                            "group": []
+                        }
+                    },
+                    "acoustic_absorption_rates": {
+                        "absorption_rate": []
+                    }
+                },
+                "custom_properties": null
+            }
+        },
+        "variants": {
+            "variant": [
+                {
+                    "id": "",
+                    "sort_order": null,
+                    "product_number": {
+                        "language": "",
+                        "value": ""
+                    },
+                    "name": {
+                        "language": "",
+                        "value": ""
+                    },
+                    "description": {
+                        "language": "",
+                        "value": ""
+                    },
+                    "tender_text": {
+                        "language": "",
+                        "value": ""
+                    },
+                    "gtin": "00000000",
+                    "mountings": {
+                        "ceiling": {
+                            "recessed": {
+                                "recessed_depth": 0,
+                                "rectangular_cutout": {
+                                    "width": 0,
+                                    "length": 0,
+                                    "depth": 0
+                                },
+                                "depth": 0
+                            },
+                            "surface_mounted": {},
+                            "pendant": {
+                                "pendant_length": 0.0
+                            }
+                        },
+                        "wall": {
+                            "mounting_height": 0,
+                            "recessed": {
+                                "recessed_depth": 0,
+                                "rectangular_cutout": {
+                                    "width": 0,
+                                    "length": 0,
+                                    "depth": 0
+                                },
+                                "depth": 0
+                            },
+                            "depth": 0
+                        },
+                        "working_plane": {
+                            "free_standing": {}
+                        },
+                        "ground": {
+                            "pole_top": {
+                                "pole_height": 0
+                            },
+                            "pole_integrated": {
+                                "pole_height": 0
+                            },
+                            "free_standing": {},
+                            "surface_mounted": {},
+                            "recessed": {
+                                "recessed_depth": 0,
+                                "rectangular_cutout": {
+                                    "width": 0,
+                                    "length": 0,
+                                    "depth": 0
+                                },
+                                "depth": 0
+                            }
+                        }
+                    },
+                    "geometry": {
+                        "emitter_reference": {
+                            "emitter_id": ""
+                        },
+                        "simple_geometry_reference": {
+                            "geometry_id": "",
+                            "emitter_id": ""
+                        },
+                        "model_geometry_reference": {
+                            "geometry_id": "",
+                            "emitter_reference": [
+                                {
+                                    "emitter_id": ""
+                                }
+                            ]
+                        },
+                        "geometry_references": {
+                            "simple_geometry_reference": {
+                                "geometry_id": "",
+                                "emitter_id": ""
+                            },
+                            "model_geometry_reference": {
+                                "geometry_id": "",
+                                "emitter_reference": []
+                            }
+                        }
+                    },
+                    "product_series": {
+                        "product_serie": []
+                    },
+                    "pictures": {
+                        "image": []
+                    },
+                    "symbol": {
+                        "file_id": ""
+                    },
+                    "descriptive_attributes": {
+                        "mechanical": null,
+                        "electrical": null,
+                        "emergency": null,
+                        "marketing": null,
+                        "operations_and_maintenance": null,
+                        "custom_properties": null
+                    }
+                },
+                {
+                    "id": "",
+                    "sort_order": null,
+                    "product_number": {
+                        "language": "",
+                        "value": ""
+                    },
+                    "name": {
+                        "language": "",
+                        "value": ""
+                    },
+                    "description": {
+                        "language": "",
+                        "value": ""
+                    },
+                    "tender_text": {
+                        "language": "",
+                        "value": ""
+                    },
+                    "gtin": "00000000",
+                    "mountings": {
+                        "ceiling": {
+                            "recessed": {
+                                "recessed_depth": 0,
+                                "rectangular_cutout": {
+                                    "width": 0,
+                                    "length": 0,
+                                    "depth": 0
+                                },
+                                "depth": 0
+                            },
+                            "surface_mounted": {},
+                            "pendant": {
+                                "pendant_length": 0.0
+                            }
+                        },
+                        "wall": {
+                            "mounting_height": 0,
+                            "recessed": {
+                                "recessed_depth": 0,
+                                "rectangular_cutout": {
+                                    "width": 0,
+                                    "length": 0,
+                                    "depth": 0
+                                },
+                                "depth": 0
+                            },
+                            "depth": 0
+                        },
+                        "working_plane": {
+                            "free_standing": {}
+                        },
+                        "ground": {
+                            "pole_top": {
+                                "pole_height": 0
+                            },
+                            "pole_integrated": {
+                                "pole_height": 0
+                            },
+                            "free_standing": {},
+                            "surface_mounted": {},
+                            "recessed": {
+                                "recessed_depth": 0,
+                                "rectangular_cutout": {
+                                    "width": 0,
+                                    "length": 0,
+                                    "depth": 0
+                                },
+                                "depth": 0
+                            }
+                        }
+                    },
+                    "geometry": {
+                        "emitter_reference": {
+                            "emitter_id": ""
+                        },
+                        "simple_geometry_reference": {
+                            "geometry_id": "",
+                            "emitter_id": ""
+                        },
+                        "model_geometry_reference": {
+                            "geometry_id": "",
+                            "emitter_reference": [
+                                {
+                                    "emitter_id": ""
+                                }
+                            ]
+                        },
+                        "geometry_references": {
+                            "simple_geometry_reference": {
+                                "geometry_id": "",
+                                "emitter_id": ""
+                            },
+                            "model_geometry_reference": {
+                                "geometry_id": "",
+                                "emitter_reference": []
+                            }
+                        }
+                    },
+                    "product_series": {
+                        "product_serie": []
+                    },
+                    "pictures": {
+                        "image": []
+                    },
+                    "symbol": {
+                        "file_id": ""
+                    },
+                    "descriptive_attributes": {
+                        "mechanical": null,
+                        "electrical": null,
+                        "emergency": null,
+                        "marketing": null,
+                        "operations_and_maintenance": null,
+                        "custom_properties": null
+                    }
+                },
+                {
+                    "id": "",
+                    "sort_order": null,
+                    "product_number": {
+                        "language": "",
+                        "value": ""
+                    },
+                    "name": {
+                        "language": "",
+                        "value": ""
+                    },
+                    "description": {
+                        "language": "",
+                        "value": ""
+                    },
+                    "tender_text": {
+                        "language": "",
+                        "value": ""
+                    },
+                    "gtin": "00000000",
+                    "mountings": {
+                        "ceiling": {
+                            "recessed": {
+                                "recessed_depth": 0,
+                                "rectangular_cutout": {
+                                    "width": 0,
+                                    "length": 0,
+                                    "depth": 0
+                                },
+                                "depth": 0
+                            },
+                            "surface_mounted": {},
+                            "pendant": {
+                                "pendant_length": 0.0
+                            }
+                        },
+                        "wall": {
+                            "mounting_height": 0,
+                            "recessed": {
+                                "recessed_depth": 0,
+                                "rectangular_cutout": {
+                                    "width": 0,
+                                    "length": 0,
+                                    "depth": 0
+                                },
+                                "depth": 0
+                            },
+                            "depth": 0
+                        },
+                        "working_plane": {
+                            "free_standing": {}
+                        },
+                        "ground": {
+                            "pole_top": {
+                                "pole_height": 0
+                            },
+                            "pole_integrated": {
+                                "pole_height": 0
+                            },
+                            "free_standing": {},
+                            "surface_mounted": {},
+                            "recessed": {
+                                "recessed_depth": 0,
+                                "rectangular_cutout": {
+                                    "width": 0,
+                                    "length": 0,
+                                    "depth": 0
+                                },
+                                "depth": 0
+                            }
+                        }
+                    },
+                    "geometry": {
+                        "emitter_reference": {
+                            "emitter_id": ""
+                        },
+                        "simple_geometry_reference": {
+                            "geometry_id": "",
+                            "emitter_id": ""
+                        },
+                        "model_geometry_reference": {
+                            "geometry_id": "",
+                            "emitter_reference": [
+                                {
+                                    "emitter_id": ""
+                                }
+                            ]
+                        },
+                        "geometry_references": {
+                            "simple_geometry_reference": {
+                                "geometry_id": "",
+                                "emitter_id": ""
+                            },
+                            "model_geometry_reference": {
+                                "geometry_id": "",
+                                "emitter_reference": []
+                            }
+                        }
+                    },
+                    "product_series": {
+                        "product_serie": []
+                    },
+                    "pictures": {
+                        "image": []
+                    },
+                    "symbol": {
+                        "file_id": ""
+                    },
+                    "descriptive_attributes": {
+                        "mechanical": null,
+                        "electrical": null,
+                        "emergency": null,
+                        "marketing": null,
+                        "operations_and_maintenance": null,
+                        "custom_properties": null
+                    }
+                },
+                {
+                    "id": "",
+                    "sort_order": null,
+                    "product_number": {
+                        "language": "",
+                        "value": ""
+                    },
+                    "name": {
+                        "language": "",
+                        "value": ""
+                    },
+                    "description": {
+                        "language": "",
+                        "value": ""
+                    },
+                    "tender_text": {
+                        "language": "",
+                        "value": ""
+                    },
+                    "gtin": "00000000",
+                    "mountings": {
+                        "ceiling": {
+                            "recessed": {
+                                "recessed_depth": 0,
+                                "rectangular_cutout": {
+                                    "width": 0,
+                                    "length": 0,
+                                    "depth": 0
+                                },
+                                "depth": 0
+                            },
+                            "surface_mounted": {},
+                            "pendant": {
+                                "pendant_length": 0.0
+                            }
+                        },
+                        "wall": {
+                            "mounting_height": 0,
+                            "recessed": {
+                                "recessed_depth": 0,
+                                "rectangular_cutout": {
+                                    "width": 0,
+                                    "length": 0,
+                                    "depth": 0
+                                },
+                                "depth": 0
+                            },
+                            "depth": 0
+                        },
+                        "working_plane": {
+                            "free_standing": {}
+                        },
+                        "ground": {
+                            "pole_top": {
+                                "pole_height": 0
+                            },
+                            "pole_integrated": {
+                                "pole_height": 0
+                            },
+                            "free_standing": {},
+                            "surface_mounted": {},
+                            "recessed": {
+                                "recessed_depth": 0,
+                                "rectangular_cutout": {
+                                    "width": 0,
+                                    "length": 0,
+                                    "depth": 0
+                                },
+                                "depth": 0
+                            }
+                        }
+                    },
+                    "geometry": {
+                        "emitter_reference": {
+                            "emitter_id": ""
+                        },
+                        "simple_geometry_reference": {
+                            "geometry_id": "",
+                            "emitter_id": ""
+                        },
+                        "model_geometry_reference": {
+                            "geometry_id": "",
+                            "emitter_reference": [
+                                {
+                                    "emitter_id": ""
+                                }
+                            ]
+                        },
+                        "geometry_references": {
+                            "simple_geometry_reference": {
+                                "geometry_id": "",
+                                "emitter_id": ""
+                            },
+                            "model_geometry_reference": {
+                                "geometry_id": "",
+                                "emitter_reference": []
+                            }
+                        }
+                    },
+                    "product_series": {
+                        "product_serie": []
+                    },
+                    "pictures": {
+                        "image": []
+                    },
+                    "symbol": {
+                        "file_id": ""
+                    },
+                    "descriptive_attributes": {
+                        "mechanical": null,
+                        "electrical": null,
+                        "emergency": null,
+                        "marketing": null,
+                        "operations_and_maintenance": null,
+                        "custom_properties": null
+                    }
+                }
+            ]
+        }
+    }
+}
