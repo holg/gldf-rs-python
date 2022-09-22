@@ -16,6 +16,12 @@ fn gldf_to_json(path: &str) -> PyResult<String> {
 }
 
 #[pyfunction]
+fn json_from_xml_str(xml_str: &str) -> PyResult<String> {
+    let loaded: GldfProduct = GldfProduct::from_xml(xml_str).unwrap();
+    Ok(loaded.to_json().unwrap())
+}
+
+#[pyfunction]
 fn xml_from_json(json_str: &str) -> PyResult<String> {
     let loaded: GldfProduct = GldfProduct::from_json(json_str).unwrap();
     Ok(loaded.to_xml().unwrap())
@@ -33,5 +39,6 @@ fn gldf_rs_python(_py: Python, m: &PyModule) -> PyResult<()> {
     m.add_function(wrap_pyfunction!(gldf_to_xml, m)?)?;
     m.add_function(wrap_pyfunction!(gldf_to_json, m)?)?;
     m.add_function(wrap_pyfunction!(xml_from_json, m)?)?;
+    m.add_function(wrap_pyfunction!(json_from_xml_str, m)?)?;
     Ok(())
 }
