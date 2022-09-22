@@ -10,9 +10,9 @@ name = "gldf_rs_python"
 crate-type = ["cdylib", "rlib"]
 
 [dependencies]
-pyo3 = { version = "0.17.1", features = ["extension-module"] }
+pyo3 = { version = "0.17", features = ["extension-module"] }
 #gldf-rs = {path = "../gldf-rs"}
-gldf-rs = {git = "https://github.com/holg/gldf-rs/", branch="json_refactor"}
+gldf-rs = {git = "https://github.com/holg/gldf-rs/"}
 
 [target.x86_64-unknown-linux-gnu]
 linker = "x86_64-unknown-linux-gnu-gcc"
