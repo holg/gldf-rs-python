@@ -119,4 +119,4 @@ jobs:
           MATURIN_PASSWORD: ${{ secrets.MATURIN_PASSWORD }}
         with:
           command: upload
-#          args: --skip-existing *
+          args: --skip-existing *
