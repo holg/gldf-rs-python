@@ -118,5 +118,5 @@ jobs:
           MATURIN_USERNAME: ${{ secrets.MATURIN_USERNAME }}
           MATURIN_PASSWORD: ${{ secrets.MATURIN_PASSWORD }}
         with:
-          command: upload
+          command: publish
           args: --skip-existing *
