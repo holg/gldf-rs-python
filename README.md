@@ -1,5 +1,14 @@
 # gldf-rs-python
-WIP python module and binding for the gldf-rs rust library
+WIP python module and binding for the gldf-rs rust library  
+the github workflow shall make sure all the wheels are build  
+and published to pypi  
+
+install via pip:  
+
+```
+pip install gldf-rs-python
+```
+
 
 create venv and maturin
 
