@@ -1,3 +1,4 @@
+[![CI](https://github.com/holg/gldf-rs-python/actions/workflows/CI.yml/badge.svg)](https://github.com/holg/gldf-rs-python/actions/workflows/CI.yml)
 # gldf-rs-python
 WIP python module and binding for the gldf-rs rust library  
 the github workflow shall make sure all the wheels are build  
