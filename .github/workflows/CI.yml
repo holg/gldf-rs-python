@@ -28,7 +28,7 @@ jobs:
     steps:
       - name: Install openssl
         run: |
-          sudo apt install libssl-dev
+          sudo apt install openssl libssl-dev
     
       - uses: actions/checkout@v3
       - uses: actions/setup-python@v4
