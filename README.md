@@ -1,6 +1,8 @@
 [![CI](https://github.com/holg/gldf-rs-python/actions/workflows/CI.yml/badge.svg)](https://github.com/holg/gldf-rs-python/actions/workflows/CI.yml)
 # gldf-rs-python
+Some more descriptive info in the Cargo.toml file
 Added the build.rs mostly bcs of macOS
+
 v0.2.0
 New:
 support for file types of url
