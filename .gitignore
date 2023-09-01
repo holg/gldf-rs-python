@@ -70,3 +70,7 @@ docs/_build/
 
 # Pyenv
 .python-version
+gldf-py
+gldf_rs_python-0.1.0-cp39-cp39-manylinux_2_28_x86_64
+Cargo.lock
+gldf_rs_python-0.1.0-cp39-cp39-manylinux_2_28_x86_64.whl

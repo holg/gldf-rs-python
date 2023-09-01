@@ -1,6 +1,6 @@
 
 use pyo3::prelude::*;
-use gldf_rs::gldf::GldfProduct;
+use gldf_rs::gldf::{GldfProduct};
 use std::path::Path;
 
 #[pyfunction]
