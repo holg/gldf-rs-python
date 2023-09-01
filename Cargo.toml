@@ -3,7 +3,11 @@ name = "gldf_rs_python"
 version = "0.2.0"
 edition = "2018"
 authors = ["Holger Trahe <trahe@mac.com>"]
-
+documentation = "https://docs.rs/gldf-rs/"
+description = "Python Module of the GLDF (General Lighting Data Format) parser and writer for Rust, specifically for the Rust/WASM target as such designed for JSON format"
+repository = "https://github.com/holg/gldf-rs-python"
+homepage = "https://github.com/holg/gldf-rs-python"
+license = "GPL-3.0-or-later"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 [lib]
 name = "gldf_rs_python"
