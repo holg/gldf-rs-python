@@ -1,6 +1,10 @@
 [![CI](https://github.com/holg/gldf-rs-python/actions/workflows/CI.yml/badge.svg)](https://github.com/holg/gldf-rs-python/actions/workflows/CI.yml)
 # gldf-rs-python
-v0.1.1
+v0.2.0
+New:
+support for file types of url
+support for BOM encoded UTF8 product.xml
+
 WIP python module and binding for the gldf-rs rust library  
 the github workflow shall make sure all the wheels are build  
 and published to pypi  
