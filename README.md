@@ -1,7 +1,21 @@
-[![CI](https://github.com/holg/gldf-rs-python/actions/workflows/CI.yml/badge.svg)](https://github.com/holg/gldf-rs-python/actions/workflows/CI.yml)
+[![Rust](https://github.com/holg/gldf-rs-python/actions/workflows/rust.yml/badge.svg)](https://github.com/holg/gldf-rs-python/actions/workflows/rust.yml)
 # gldf-rs-python
 Some more descriptive info in the Cargo.toml file
 Added the build.rs mostly bcs of macOS
+Release notes:
+
+0.2.3
+- added new header definition, because FormatVersion changed
+- added Logger to pass into some methods
+- added test to completely check and compare to URL based gldf
+- bumped up versions of dependencies
+
+0.2.2
+- added support meta-information.xml
+
+0.2.1
+- added better documentation fo the main page
+- for wasm support some refactoring was needed, to use reqwest::blocking
 
 v0.2.0
 New:
