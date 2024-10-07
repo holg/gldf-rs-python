@@ -1,6 +1,6 @@
 [package]
 name = "gldf_rs_python"
-version = "0.2.0"
+version = "0.2.3"
 edition = "2018"
 authors = ["Holger Trahe <trahe@mac.com>"]
 documentation = "https://docs.rs/gldf-rs/"
