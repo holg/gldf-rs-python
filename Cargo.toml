@@ -15,16 +15,16 @@ crate-type = ["cdylib", "rlib"]
 
 [dependencies]
 pyo3 = { version = "0.19", features = ["extension-module", "abi3-py37"]}
-gldf-rs = "0.2"
+gldf-rs = "0.2.3"
 #gldf-rs = {path = "../gldf-rs"}
-openssl = { version = "0.10.57", features = ["vendored"] }
+openssl = { version = "0.10.66", features = ["vendored"] }
 #gldf-rs = {git = "https://github.com/holg/gldf-rs/", branch = "staging"}
 
 [features]
 # must be enabled when building with `cargo build`, maturin enables this automatically
 extension-module = ["pyo3/extension-module"]
 [build-dependencies]
-version_check = {version = "0.9.4"}
+version_check = {version = "0.9.5"}
 # used where logic has to be version/distribution specific, e.g. pypy
 pyo3-build-config = { version = "0.19.2" }
 
