@@ -13,11 +13,17 @@ license = "GPL-3.0-or-later"
 name = "gldf_rs_python"
 crate-type = ["cdylib", "rlib"]
 
+[[bin]]
+name = "gldf-cli"
+path = "src/main.rs"
+
 [dependencies]
 pyo3 = { version = "0.19", features = ["extension-module", "abi3-py37"]}
 gldf-rs = "0.2.3"
 #gldf-rs = {path = "../gldf-rs"}
 openssl = { version = "0.10.66", features = ["vendored"] }
+anyhow = "1.0"
+clap = { version = "4.0", features = ["derive"] }
 #gldf-rs = {git = "https://github.com/holg/gldf-rs/", branch = "staging"}
 
 [features]
