@@ -2,8 +2,9 @@
 use pyo3::prelude::*;
 use pyo3::exceptions::PyException;
 use gldf_rs::gldf::GldfProduct;
-use gldf_rs::Logger;
+use gldf_rs::{Logger, fetch_text_from_url_async};
 use std::fmt;
+use futures::executor::block_on;
 
 // Simple logger implementation for Python integration
 #[derive(Clone)]
@@ -88,23 +89,26 @@ fn xml_from_json(json_str: &str) -> PyResult<String> {
         .map_err(anyhow_to_pyerr)
 }
 
-// Async versions will be added in a future update when pyo3-asyncio compatibility is resolved
-// For now, we'll focus on improved error handling and logging
-
-// #[pyfunction]
-// fn gldf_to_xml_async(py: Python, path: String) -> PyResult<&PyAny> {
-//     pyo3_asyncio::tokio::future_into_py(py, async move {
-//         let logger = PythonLogger::new("gldf_to_xml_async");
-//         logger.log(&format!("Loading GLDF file async: {}", path));
-//         
-//         let loaded = GldfProduct::load_gldf(&path)
-//             .map_err(anyhow_to_pyerr)?;
-//         
-//         logger.log("Converting to XML async");
-//         loaded.to_xml()
-//             .map_err(anyhow_to_pyerr)
-//     })
-// }
+// Async functionality wrapped for Python - uses blocking executor
+// This demonstrates how the underlying async capabilities can be exposed
+#[pyfunction]
+fn fetch_and_convert_to_json(url: &str) -> PyResult<String> {
+    let logger = PythonLogger::new("fetch_and_convert_to_json");
+    logger.log(&format!("Fetching content from URL: {}", url));
+    
+    // Use the async function from gldf-rs with block_on
+    let content = block_on(fetch_text_from_url_async(url))
+        .map_err(|e| PyException::new_err(format!("Failed to fetch URL: {}", e)))?;
+    
+    logger.log("Content fetched, parsing as GLDF XML");
+    
+    let loaded = GldfProduct::from_xml(&content)
+        .map_err(anyhow_to_pyerr)?;
+    
+    logger.log("Converting to JSON");
+    loaded.to_json()
+        .map_err(anyhow_to_pyerr)
+}
 
 /// A Python module implemented in Rust.
 #[pymodule]
@@ -115,8 +119,8 @@ fn gldf_rs_python(_py: Python, m: &PyModule) -> PyResult<()> {
     m.add_function(wrap_pyfunction!(xml_from_json, m)?)?;
     m.add_function(wrap_pyfunction!(json_from_xml_str, m)?)?;
     
-    // Async functions will be added in a future update
-    // when pyo3-asyncio compatibility is resolved
+    // Async functionality wrapped in blocking executor
+    m.add_function(wrap_pyfunction!(fetch_and_convert_to_json, m)?)?;
     
     Ok(())
 }

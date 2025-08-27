@@ -1,9 +1,10 @@
 use clap::{Arg, Command};
 use gldf_rs::gldf::GldfProduct;
-use gldf_rs::Logger;
+use gldf_rs::{Logger, fetch_text_from_url_async};
 use std::fs;
 use std::io::{self, Write};
 use anyhow::{Context, Result};
+use futures::executor::block_on;
 
 // CLI Logger implementation
 #[derive(Clone)]
@@ -103,6 +104,23 @@ fn main() -> Result<()> {
                         .value_name("FILE")
                 )
         )
+        .subcommand(
+            Command::new("fetch-and-convert")
+                .about("Fetch content from URL and convert to JSON (demonstrates async capabilities)")
+                .arg(
+                    Arg::new("url")
+                        .help("URL to fetch content from")
+                        .required(true)
+                        .index(1)
+                )
+                .arg(
+                    Arg::new("output")
+                        .short('o')
+                        .long("output")
+                        .help("Output JSON file path (stdout if not specified)")
+                        .value_name("FILE")
+                )
+        )
         .get_matches();
 
     let verbose = matches.get_flag("verbose");
@@ -179,6 +197,31 @@ fn main() -> Result<()> {
             write_output(&xml_content, output_path)?;
             if verbose {
                 logger.log("Conversion completed successfully");
+            }
+        }
+        Some(("fetch-and-convert", sub_matches)) => {
+            let url = sub_matches.get_one::<String>("url").unwrap();
+            let output_path = sub_matches.get_one::<String>("output");
+            
+            logger.log(&format!("Fetching content from URL: {}", url));
+            
+            // Use async function from gldf-rs to demonstrate improved async capabilities
+            let content = block_on(fetch_text_from_url_async(url))
+                .with_context(|| format!("Failed to fetch content from URL: {}", url))?;
+            
+            logger.log("Content fetched successfully, attempting to parse as XML");
+            
+            // Try to parse as GLDF XML and convert to JSON
+            let loaded = GldfProduct::from_xml(&content)
+                .context("Failed to parse fetched content as GLDF XML")?;
+            
+            logger.log("Converting to JSON");
+            let json_content = loaded.to_json()
+                .context("Failed to convert to JSON")?;
+            
+            write_output(&json_content, output_path)?;
+            if verbose {
+                logger.log("Async fetch and conversion completed successfully");
             }
         }
         _ => {
