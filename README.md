@@ -1,4 +1,11 @@
-[![Rust](https://github.com/holg/gldf-rs-python/actions/workflows/rust.yml/badge.svg)](https://github.com/holg/gldf-rs-python/actions/workflows/rust.yml)
+This package is now part of the [gldf-rs](https://github.com/holg/gldf-rs) monorepo.
+
+  - **New location**: https://github.com/holg/gldf-rs/tree/main/gldf-rs-python
+  - **PyPI**: https://pypi.org/project/gldf-rs-python/
+  - **crates.io**: https://crates.io/crates/gldf-rs-python
+
+  Please file issues and PRs in the main repository.
+
 # gldf-rs-python
 Some more descriptive info in the Cargo.toml file
 Added the build.rs mostly bcs of macOS
